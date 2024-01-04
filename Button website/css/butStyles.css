@@ -1,0 +1,54 @@
+h1 {
+    text-align: center;
+    font: 4em Impact;
+}
+
+h3 {
+    text-align: center;
+    font: 1em Impact;}
+
+body {
+    background-color: #2cc30e95;
+}
+
+#toolbar {
+    display: flex;
+    justify-content: center;
+}
+
+#Pictures-with-noise {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 660px; /* Width of three images including margins */
+    margin: 0 auto; /* Center the container */
+}
+
+#Pictures-with-noise img {
+    width: 200px;
+    height: 100px;
+    margin: 10px; /* Adjust as needed */
+    
+}
+
+.end_text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3.5rem; /* Adjust as needed */
+    text-align: center;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container p {
+    padding-top: 0px; /* Adjust this value as needed */
+    text-align: center;
+    font: 1em Impact;
+}
+
+.hidden {
+    display: none;
+}

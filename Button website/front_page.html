@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html> 
+    <link rel="stylesheet" href="css/butStyles.css">
+    <title>Button front page</title>
+<body>
+    <header>
+        <h1>PRESS A IMAGE</h1>
+    </header>
+
+    <main>
+        <!--toolbar that will filter the images-->
+        <h3>Image toolbar</h3>
+        <div id="toolbar">
+            <button class="filter-button" data-filter="P">P</button>
+            <button class="filter-button" data-filter="M">M</button>
+            <button class="filter-button" data-filter="R">R</button>
+            <button class="filter-button" data-filter="all">All</button>
+          </div>
+
+        <!--images and noises-->
+        <div id="Pictures-with-noise">
+
+            <div class="image-container">
+                <!--peter image and noise-->
+                <img class="P" id="myImage1" src="images/peter_ouch.jpg" alt="peter hit knee"> <!--This is using the downloaded image on my pc-->
+                <audio id="myAudio1" src="sounds/peter fall.mp4" preload="auto"></audio>
+                <p>peter ouch.</p>
+            </div>
+
+            <div class="image-container">
+                <!--what the dog doing-->
+                <img class="M" id="myImage2" src="https://images.unsplash.com/photo-1575425186775-b8de9a427e67?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="what the dog doin"> <!--This is using a absolute link image from the website unsplash-->
+                <audio id="myAudio2" src="sounds/what the dog doing audio.mp4" preload="auto"></audio>
+                <p>what the dog doing.</p>
+            </div>
+
+            <div class="image-container">
+                <!--peter wow-->
+                <img class="P" id="myImage3" src="https://i.ytimg.com/vi/Twn2VceaI8E/hqdefault.jpg" alt="peter wow"> 
+                <audio id="myAudio3" src="sounds/peter wow.mp4" preload="auto"></audio>
+                <p>peter wow.</p>
+            </div>
+
+            <div class="image-container">
+                <!--wesker-->
+                <img class="R" id="myImage4" src="https://www.victoriajacket.com/wp-content/uploads/2023/04/Resident-Evil-5-Albert-Wesker-Black-Coat.webp" alt="wesker"> 
+                <audio id="myAudio4" src="sounds/wesker 7 minutes audio.mp4" preload="auto"></audio>
+                <p>wesker 7 minutes.</p>
+            </div>
+
+            <div class="image-container">
+                <!--leon-->
+                <img class="R" id="myImage5" src="https://i.pinimg.com/1200x/59/3a/c6/593ac6ec63c8ed675db8a55297d608f0.jpg" alt="leon"> 
+                <audio id="myAudio5" src="sounds/no thanks bro.mp4" preload="auto"></audio>
+                <p>no thanks bro.</p>
+            </div>
+
+            <div class="image-container">
+                <!--ninja-->
+                <img class="M" id="myImage6" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7oklybIuppdStT0YxBBpCsbZMaLeKi1dbgw&usqp=CAU" alt="ninja"> 
+                <audio id="myAudio6" src="sounds/ninja.mp4" preload="auto"></audio>
+                <p>ninja</p>
+            </div>
+
+            <div class="image-container">
+                <!--china dude-->
+                <img class="M" id="myImage7" src="https://i.ytimg.com/vi/6EGeWTwjhEM/hqdefault.jpg" alt="china dude"> 
+                <audio id="myAudio7" src="sounds/china dude audio.mp4" preload="auto"></audio>
+                <p>china dude</p>
+            </div>
+
+            <div class="image-container">
+                <!--vine sound effect-->
+                <img class="M" id="myImage8" src="https://us-tuna-sounds-images.voicemod.net/65802c33-d50c-430e-89a8-0ae94994a8ed-1672011194791.jpg" alt="vine"> 
+                <audio id="myAudio8" src="sounds/vine noise.mp4" preload="auto"></audio>
+                <p>vine</p>
+            </div>
+
+            <div class="image-container">
+                <!--burger no honey mustard-->
+                <img class="M" id="myImage9" src="https://images.voicy.network/Content/Clips/Images/837a9869-33e8-4f68-a56e-c517c909bf40-small.png" alt="no honey"> 
+                <audio id="myAudio9" src="sounds/no honey.mp4" preload="auto"></audio>
+                <p>burger no honey mustard</p>
+            </div>
+        </div>
+
+    <!--JavaScript-->
+    <script>
+        //This is the javascript code that will play the audio when the image is clicked
+        document.getElementById("myImage1").addEventListener("click", function(){
+            document.getElementById("myAudio1").play();
+        });
+
+        document.getElementById("myImage2").addEventListener("click", function(){
+            document.getElementById("myAudio2").play();
+        });
+
+        document.getElementById("myImage3").addEventListener("click", function(){
+            document.getElementById("myAudio3").play();
+        });
+
+        document.getElementById("myImage4").addEventListener("click", function(){
+            document.getElementById("myAudio4").play();
+        });
+
+        document.getElementById("myImage5").addEventListener("click", function(){
+            document.getElementById("myAudio5").play();
+        });
+
+        document.getElementById("myImage6").addEventListener("click", function(){
+            document.getElementById("myAudio6").play();
+        });
+
+        document.getElementById("myImage7").addEventListener("click", function(){
+            document.getElementById("myAudio7").play();
+        });
+
+        document.getElementById("myImage8").addEventListener("click", function(){
+            document.getElementById("myAudio8").play();
+        });
+
+        document.getElementById("myImage9").addEventListener("click", function(){
+            document.getElementById("myAudio9").play();
+        });
+
+        //javascript code that will filter the images and keeps the text with the image
+        var filterButtons = document.getElementsByClassName('filter-button');
+
+        for (var i = 0; i < filterButtons.length; i++) {
+            filterButtons[i].addEventListener('click', function() {
+                var filter = this.getAttribute('data-filter');
+                var images = document.getElementsByTagName('img');
+
+                for (var j = 0; j < images.length; j++) {
+                    var p = images[j].parentNode.querySelector('p');
+                    if (filter === 'all' || images[j].classList.contains(filter)) {
+                        images[j].style.display = '';
+                        if (p) p.classList.remove('hidden');
+                    } else {
+                        images[j].style.display = 'none';
+                        if (p) p.classList.add('hidden');
+                    }
+                }
+            });
+        }
+    </script>
+    </main>
+
+    <footer>
+        <p class="end_text">Thanks for using the website!</p>
+    </footer>
+
+</body>
+</html>
