@@ -1,4 +1,4 @@
-Funny button webpage template that demonstrates my ability with HTML, JavaScript, and CSS.
+Quick Funny button webpage template I came up with that demonstrates my ability with HTML, JavaScript, and CSS.
 
 You can change the images as you want, you have to download the audio on your pc for the audio to work.
 
